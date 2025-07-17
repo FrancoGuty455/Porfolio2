@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at 20% 20%, #1a1a1a, #0f0f0f 80%);
+  color: #f5f5f5;
+  scroll-behavior: smooth;
+  background-attachment: fixed;
+  animation: bgScroll 60s ease-in-out infinite;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+@keyframes bgScroll {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d19514; 
+  border-radius: 5px;
+}
+
+.glow-text {
+  color: #fca311; 
+  text-shadow: 0 0 4px #fb8500, 0 0 12px #fb8500, 0 0 24px #fb8500;
+}
+
+.glass-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+  margin-bottom: 5rem;
+}
+
+h1, h2, h3 {
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.08);
+}
+
+button {
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  filter: brightness(1.2);
+  transform: translateY(-2px);
+}
+
+section {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1rem;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .flex-row {
+    flex-direction: column;
+  }
+}
+.skill-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.skill-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+h1 {
+  font-size: 3.5rem; 
+}
+
+h2 {
+  font-size: 2.5rem; 
+}
+
+h3 {
+  font-size: 2rem; 
+}
+p {
+  font-size: 1.125rem; }
+li {
+  font-size: 1.5rem; 
+  line-height: 1.6;
+}
+.project-image {
+  max-width: 1000px;
+  max-height: 1000px;
+  object-fit: cover;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+a:visited {
+  color: inherit; 
+}
+
+form {
+  background: rgba(30, 30, 30, 0.85);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(251, 133, 0, 0.3); 
+  max-width: 480px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+form input,
+form textarea {
+  background: #1f1f1f;
+  border: 2px solid #bb7000; 
+  color: #e0e0e0;
+  padding: 0.9rem 1.1rem;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #b48600; 
+  font-style: italic;
+}
+
+
+form input:focus,
+form textarea:focus {
+  border-color: #fb8500; 
+  box-shadow: 0 0 8px #fb8500;
+  outline: none;
+}
+
+form textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+form button {
+  background: linear-gradient(45deg, #fb8500, #fca311); 
+  color: white;
+  font-weight: 700;
+  padding: 0.9rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(251, 133, 0, 0.5);
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+form button:hover {
+  background: linear-gradient(45deg, #fca311, #fb8500);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(251, 133, 0, 0.7);
+}
+.dropdown-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.dropdown-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.dropdown-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.dropdown-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
