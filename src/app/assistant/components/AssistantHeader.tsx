@@ -46,7 +46,7 @@ export default function AssistantHeader() {
           </Link>
 
           {/* Botón: Cambiar modo */}
-          <Link href="/assistant">
+          <Link href="/classic">
             <button className="flex items-center gap-2 px-4 py-2 rounded-lg
               text-white font-medium transition-all duration-300
               hover:bg-white/10 hover:backdrop-blur-sm

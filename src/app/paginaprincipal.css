@@ -1,0 +1,68 @@
+.home-wrapper {
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.home-wrapper main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.home-wrapper h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-wrapper p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.home-wrapper .button-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.home-wrapper .button-classic,
+.home-wrapper .button-assistant {
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.home-wrapper .button-classic {
+  background-color: #111111;
+  color: white;
+}
+
+.home-wrapper .button-classic:hover {
+  background-color: #2a2a2a;
+  transform: scale(1.05);
+}
+
+.home-wrapper .button-assistant {
+  background-color: #6ee7b7;
+  color: black;
+}
+
+.home-wrapper .button-assistant:hover {
+  background-color: #34d399;
+  transform: scale(1.05);
+}

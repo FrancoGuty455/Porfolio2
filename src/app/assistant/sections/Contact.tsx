@@ -111,6 +111,7 @@ export default function Contact({ contact }: Props) {
 </ul>
 
 
+<div className="bg-red-500 h-4 w-full"></div>
     </section>
   );
 }

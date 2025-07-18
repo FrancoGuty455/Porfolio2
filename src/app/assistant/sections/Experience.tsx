@@ -1,5 +1,4 @@
-import redbirds from "../animations/redbirds.json";
-import Lottie from "lottie-react";
+
 type Props = {
   experience: {
     role: string;
@@ -26,11 +25,7 @@ export default function Experience({ experience }: Props) {
           shadow-md px-6 py-8 max-w-3xl mx-auto
         "
       >
-         <Lottie
-                        animationData={redbirds}
-                        loop
-                        className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
-                      />
+        
         <h2 className="glow-text text-3xl font-semibold mb-6 text-white drop-shadow-[0_0_8px_white]">
           Experience
         </h2>
